@@ -21,12 +21,12 @@ class UserSeeder extends Seeder
         ]);
         $user->assignRole('admin');
 
-        $user = Aplikasi::create([
-            'name'         => 'customer',
-            'user_id'      => 1,
-            'descriptions' => "aplikasi",
-            'api_token'    => Str::random(40)
-        ]);
-        $user->assignRole('customer');
+        // $user = Aplikasi::create([
+        //     'name'         => 'customer',
+        //     'user_id'      => 1,
+        //     'descriptions' => "aplikasi",
+        //     'api_token'    => Str::random(40)
+        // ]);
+        // $user->assignRole('customer');
     }
 }

@@ -9,7 +9,6 @@ class Aplikasi extends Model
 {
     use HasRoles;
 
-    protected $guard_name = 'aplikasi';
     protected $table = 'aplikasis';
     protected $fillable = [
         'user_id', 'name', 'descriptions', 'api_token',

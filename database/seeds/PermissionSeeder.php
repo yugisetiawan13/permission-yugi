@@ -20,12 +20,6 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'Data Provider', 'guard_name' => 'web']);
         Permission::create(['name' => 'Data Pengunjung', 'guard_name' => 'web']);
         Permission::create(['name' => 'Data Keberangkatan', 'guard_name' => 'web']);
-        Permission::create(['name' => 'Data Cancel', 'guard_name' => 'web']);
-        Permission::create(['name' => 'User Manager', 'guard_name' => 'aplikasi']);
-        Permission::create(['name' => 'Data Terminal', 'guard_name' => 'aplikasi']);
-        Permission::create(['name' => 'Data Provider', 'guard_name' => 'aplikasi']);
-        Permission::create(['name' => 'Data Pengunjung', 'guard_name' => 'aplikasi']);
-        Permission::create(['name' => 'Data Keberangkatan', 'guard_name' => 'aplikasi']);
-        Permission::create(['name' => 'Data Cancel', 'guard_name' => 'aplikasi']);
+
     }
 }

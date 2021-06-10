@@ -17,11 +17,11 @@ class RoleSeeder extends Seeder
             'guard_name' => 'web'
         ]);
         $role->givePermissionTo('User Manager');
-        $role = Role::create([
-            'name'       => 'customer',
-            'guard_name' => 'aplikasi'
-        ]);
-        $role->givePermissionTo('Data Pengunjung');
+        // $role = Role::create([
+        //     'name'       => 'customer',
+        //     'guard_name' => 'aplikasi'
+        // ]);
+        // $role->givePermissionTo('Data Pengunjung');
 
     }
 }

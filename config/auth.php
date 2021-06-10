@@ -40,10 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'aplikasi' => [
-            'driver' => 'session',
-            'provider' => 'aplikasis',
-        ],
+        // 'aplikasi' => [
+        //     'driver' => 'session',
+        //     'provider' => 'aplikasis',
+        // ],
 
         'api' => [
             'driver' => 'token',
@@ -74,10 +74,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Aplikasi::class,
-        ],
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Aplikasi::class,
+        // ],
 
         // 'users' => [
         //     'driver' => 'database',
