@@ -9,7 +9,7 @@ class SiswaController extends Controller
 {
     public function index()
     {
-        $siswa = Siswa::all();
+        $siswa = Siswa::latest()->get();
         return response()->json([
             'status'  => true,
             'message' => 'Sukses Mengambil data siswa',

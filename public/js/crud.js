@@ -72,17 +72,20 @@ $(function() {
                 url: '/siswa/store',
                 type: 'POST',
                 data: $(form).serialize(),
+                beforeSend: function() {
+                    $('#btn_save').prop('disabled', true).html('Loading..')
+                },
                 success: function(res) {
-                    alert(res.message)
+                    // alert(res.message)
                     ajaxData()
                     $('#modal_add').modal('hide')
                 },
                 error: function(err) {
-
+                    alert(err.responseJSON.message)
                 },
                 complete: function() {
-
-                }
+                    $('#btn_save').prop('disabled', false).html('Save')
+                },
             })
         }
 
