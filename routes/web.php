@@ -16,6 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('/mahasiswa', 'layouts.livewire');
+// Route::view('/hello-world', 'layouts.livewire');
 
 Auth::routes();
 

@@ -14,9 +14,10 @@
 </head>
 
 <body>
-    {{--  @livewire('hello-world')  --}}
+     {{-- @livewire('hello-world') --}}
     @livewire('mahasiswa')
-    
+    {{-- @livewire('mahasiswa') --}}
+
     @livewireScripts
     <script>
         window.livewire.on('mahasiswaAdd', () => {
@@ -25,8 +26,8 @@
         window.livewire.on('updateMahasiswa', () => {
             $('#updateModalMahasiswa').modal('hide');
         });
-       
-      
+
+
     </script>
 </body>
 
