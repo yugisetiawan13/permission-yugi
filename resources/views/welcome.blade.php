@@ -53,7 +53,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Update Data</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">New Data</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -92,7 +92,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Delete Data</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Update Data</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -139,7 +139,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h4>Ni data mau di apus nih ...</h4>
+                        <h4>Apakah anda yakin menghapus data :<br>"<span id="nama" class="text-danger"></span>"</h4>
                         {{-- <p></p> --}}
                     </div>
                     <div class="modal-footer">

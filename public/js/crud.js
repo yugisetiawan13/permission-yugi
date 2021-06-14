@@ -84,6 +84,8 @@ function ajaxReuse(id,button,action){
            if(action === 'delete'){
                 $('#delete_id').val(res.result.id)
 
+                $('#nama').text(`${res.result.firstname} ${res.result.lastname}`)
+
                 $('#modal_delete').modal('show')
            }
         },
