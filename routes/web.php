@@ -26,5 +26,6 @@ Route::prefix('siswa')->group( function(){
     Route::get('/', 'SiswaController@index')->name('user.index');
     Route::post('/store', 'SiswaController@store')->name('user.store');
     Route::put('/update/{id}', 'SiswaController@update')->name('user.update');
-    Route::delete('/delete/{id}', 'SiswaController@delete')->name('user.delete');
+    Route::delete('/delete/{id}', 'SiswaController@destroy')->name('user.delete');
+    Route::get('/{id}', 'SiswaController@show')->name('user.show');
 });

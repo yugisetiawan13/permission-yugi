@@ -51,40 +51,85 @@ class SiswaController extends Controller
 
     public function show($id)
     {
+      
         $siswa = Siswa::findOrFail($id);
-        return response()->json([
-                'status'  => true,
-                'message' => 'Sukses Menambah data siswa',
+
+        return response()->json( [
+                'status' => true,
+                'message' => 'Success Fetch Data',
                 'result' => $siswa
-        ], 200);
+            ],
+            200);
 
     }
 
 
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'firstname' => 'required',
-            'lastname'  => 'required',
-            'prodi'     => 'required',
+        $siswa = Siswa::findOrFail($id);
+
+        $this->validate($request,[
+            'firstname' => 'required|string',
+            'lastname' => 'required|string',
+            'prodi' => 'required'
         ]);
 
-        $siswa = Siswa::findOrFail($id);
-        $siswa->firstname = $request->firstname;
-        $siswa->lastname  = $request->lastname;
-        $siswa->prodi     = $request->prodi;
-        $siswa->update();
-        return response()->json([
-                'status'  => true,
-                'message' => 'Sukses Update data siswa',
-                'results' => $siswa
-        ], 200);
+        try{
 
+            $siswa->firstname = $request->firstname;
+            $siswa->lastname = $request->lastname;
+            $siswa->prodi =$request->prodi;
+
+            $siswa->update();
+
+        } catch (\Exception $e){
+            return response()->json(
+                [
+                    'status' => false,
+                    'message' => 'Failed',
+                    'error' => $e->getMessage()
+                ],
+                500
+            ); 
+        }
+
+        return response()->json(
+            [
+                'status' => true,
+                'message' => 'Success',
+                'results' => $siswa
+            ],
+            200
+        ); 
     }
 
 
     public function destroy($id)
     {
-        //
+        $siswa = Siswa::findOrFail($id);
+
+        try{
+
+            $siswa->delete($id);
+
+        } catch(\Exception $e){
+            return response()->json(
+                [
+                    'status' => false,
+                    'message' => 'Failed',
+                    'error' => $e->getMessage()
+                ],
+                500
+            ); 
+        }
+
+        return response()->json(
+            [
+                'status' => true,
+                'message' => 'Success',
+                'results' => $siswa
+            ],
+            200
+        ); 
     }
 }
